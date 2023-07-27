@@ -1,1 +1,10 @@
-<p>tictactoe works!</p>
+<div class="game-box">
+  <p>Player: {{whoPlaysNow}} </p>
+  <div class="game-board">
+  <div class="game-row" *ngFor="let row of tiles;index as rowIndex">
+    <button class="cell" *ngFor="let cell of row;index as colIndex" (click)="cellClikced(rowIndex,colIndex)" ><div class="cell-text">{{cell}}</div></button>
+  </div>
+</div>
+<button (click)="newGamePressed()">new game</button>
+</div>
+
