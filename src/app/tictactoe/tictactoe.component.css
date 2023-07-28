@@ -34,3 +34,10 @@
 .game-row{
 display: flex;
 }
+.btn{
+  border: none;
+  outline: none;
+  font-size: large;
+  padding: 0.5em;
+  border-radius: 7px;
+}

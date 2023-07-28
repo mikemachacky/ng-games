@@ -6,12 +6,12 @@
   </div>
 </div>
 <div *ngIf="winner">
-  <h2>Wygrał gracz: {{ winner }}</h2>
-  <button (click)="newGamePressed()">Zagraj ponownie</button>
+  <p>Wygrał gracz: {{ winner }}</p>
+  <button class="btn" (click)="newGamePressed()">Zagraj ponownie</button>
 </div>
 <div *ngIf="isDraw && !winner">
-  <h2>Remis!</h2>
-  <button (click)="newGamePressed()">Zagraj ponownie</button>
+  <p>Remis!</p>
+  <button class="btn" (click)="newGamePressed()">Zagraj ponownie</button>
 </div>
 </div>
 
