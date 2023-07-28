@@ -8,9 +8,13 @@
   border-radius: 7px;
   padding: 1em;
 }
-.game-board{
-
+.game-board {
+  display: flex;
+  justify-content: center; /* Wyśrodkowanie na poziomie */
+  flex-wrap: wrap;
+  flex-basis: 33%;
 }
+
 .cell{
 
   width: 75px;
