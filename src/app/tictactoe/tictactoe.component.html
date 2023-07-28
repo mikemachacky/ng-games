@@ -1,10 +1,17 @@
 <div class="game-box">
-  <p>Player: {{whoPlaysNow}} </p>
+  <p>Kolej gracza: {{whoPlaysNow}} </p>
   <div class="game-board">
   <div class="game-row" *ngFor="let row of tiles;index as rowIndex">
-    <button class="cell" *ngFor="let cell of row;index as colIndex" (click)="cellClikced(rowIndex,colIndex)" ><div class="cell-text">{{cell}}</div></button>
+    <button class="cell" *ngFor="let cell of row;index as colIndex" (click)="cellClicked(rowIndex,colIndex)" ><div class="cell-text">{{cell}}</div></button>
   </div>
 </div>
-<button (click)="newGamePressed()">new game</button>
+<div *ngIf="winner">
+  <h2>Wygrał gracz: {{ winner }}</h2>
+  <button (click)="newGamePressed()">Zagraj ponownie</button>
+</div>
+<div *ngIf="isDraw && !winner">
+  <h2>Remis!</h2>
+  <button (click)="newGamePressed()">Zagraj ponownie</button>
+</div>
 </div>
 
